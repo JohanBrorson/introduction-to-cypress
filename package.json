@@ -5,6 +5,10 @@
   "repository": "git@github.com:JohanBrorson/introduction-to-cypress.git",
   "author": "Johan Brorson <johan_brorson@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "cypress": "cypress open",
+    "test": "cypress run"
+  },
   "dependencies": {
     "cypress": "^3.4.1"
   }

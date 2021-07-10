@@ -33,14 +33,14 @@ export function getTodoList() {
 }
 
 export function getTodoTextItem(todoIndex) {
-  return getTodoList().within(() => {
-    cy.get(`li:nth-child(${todoIndex + 1}) label`);
+  return getTodoList().then((el) => {
+    cy.wrap(el).find(`li:nth-child(${todoIndex + 1}) label`);
   });
 }
 
 export function getTodoListItems() {
-  return getTodoList().within(() => {
-    cy.get("li");
+  return getTodoList().then((el) => {
+    cy.wrap(el).find("li");
   });
 }
 
